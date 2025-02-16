@@ -33,6 +33,6 @@ class XinghuoWeb:
 if __name__ == "__main__":
     from configuration import Config
     c = Config()
-    xinghuo = XinghuoWeb(c.XINGHUO_WEB)
+    xinghuo = XinghuoWeb(c.XinghuoWeb)
     rsp = xinghuo.get_answer("你还活着？")
     print(rsp)

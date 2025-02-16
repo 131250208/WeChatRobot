@@ -79,8 +79,7 @@ class ChatGPT():
                 cont["content"] = time_mk + now_time
 
         # 只存储10条记录，超过滚动清除
-        i = len(self.conversation_list[wxid])
-        if i > 10:
+        if len(self.conversation_list[wxid]) > 10:
             print("滚动清除微信记录：" + wxid)
             # 删除多余的记录，倒着删，且跳过第一个的系统消息
             del self.conversation_list[wxid][1]
@@ -88,7 +87,7 @@ class ChatGPT():
 
 if __name__ == "__main__":
     from configuration import Config
-    config = Config().CHATGPT
+    config = Config().ChatGPT
     if not config:
         exit(0)
 

@@ -44,6 +44,6 @@ class TigerBot:
 if __name__ == "__main__":
     from configuration import Config
     c = Config()
-    tbot = TigerBot(c.TIGERBOT)
+    tbot = TigerBot(c.TigerBot)
     rsp = tbot.get_answer("你还活着？")
     print(rsp)
